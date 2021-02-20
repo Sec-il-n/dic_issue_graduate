@@ -16,7 +16,8 @@ class SuggestsController < ApplicationController
     else
       if @suggest.save
         Participant.create(suggest_id: @suggest.id, user_id: current_user.id)
-        redirect_to suggests_path,
+        redirect_to participants_path,
+        # redirect_to suggests_path,
         notice: t('.suggest.created')
       else
         flash.now[:warning] = t('.suggest.create_faild')

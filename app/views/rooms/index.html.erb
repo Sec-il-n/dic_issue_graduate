@@ -13,11 +13,11 @@
 
       <% @rooms.each do |room| %>
       <%# まだチャットルームを開設していない場合@roomsの配列にnilがはいる %>
-        <% unless room.nil? %>
+        <% if room.present? %>
           <tbody>
             <tr>
               <th><%= " #{room.suggest.title}" %></th>
-              <td><%= room.messages.last.updated_at.strftime('%Y/%m/%d %H:%M:%S') %></td>
+              <td><%= room.messages.last.updated_at.strftime('%Y/%m/%d %H:%M:%S') if room.messages.present?  %></td>
               <td></td>
               <td><%= link_to "#{t('.move_to_room')}", room_path(room.id), class: 'right btn btn-info' %></td>
             </tr>

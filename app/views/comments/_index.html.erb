@@ -15,7 +15,9 @@
 <% end %>
 <%= comments.count %>件コメント
 <!-- コメント二件 -->
-<h6 class="more" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">もっと見る....</h6>
+<% if comments.present? %>
+  <h6 class="more" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">もっと見る....</h6>
+<% end %>
 
 <% comments.first(2).each do |comment| %>
   <% unless comment.id.nil? %>

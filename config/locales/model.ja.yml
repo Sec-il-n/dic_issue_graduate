@@ -24,11 +24,13 @@ ja:
         info: 詳細
         image: イメージ
         category_id: 業種カテゴリ
+        category: 業種カテゴリ
       proprietorship:
         name: 企業(個人)名
         info: 詳細
         image: イメージ
         category_id: 業種カテゴリ
+        category: 業種カテゴリ
       comment:
         text: コメント
       contact:
