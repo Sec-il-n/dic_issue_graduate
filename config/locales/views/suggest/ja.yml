@@ -8,7 +8,7 @@ ja:
       registration: 新規登録
   suggests:
     new:
-      title: 新規投稿
+      title: 新規提案
       register needed: 企業登録が必要です
       file: ファイル選択(画像)
     index:
